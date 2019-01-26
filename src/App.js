@@ -12,7 +12,7 @@ import HomePage from './Components/HomePage';
 import Hangman from './Components/Hangman';
 import Hint from './Components/Hint';
 
-import Home from './img/home2.png';
+import Home from './img/home.png';
 
 import img1 from './img/10.png';
 import img2 from './img/11.png';
