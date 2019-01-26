@@ -7,16 +7,29 @@ $gray: #707070;
 @import url('https://fonts.googleapis.com/css?family=Short+Stack');
 $font: 'Short Stack', cursive;
 
+#winBackground {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    z-index: 5;
+
+}
+
 #winContainer {
 	position: absolute;
-	height: 350px;
-	width: 550px;
-	padding: 10px 20px 10px 20px;
+	height: 360px;
+	width: 560px;
+	padding: 20px;
 	text-align: center;
-	margin-top: 15%;
+	margin-top: 13%;
 	margin-left: 30%;
 	border: 3px solid $black;
-	border-radius: 3px;
+	border-radius: 4px;
 	background-image: url( ../img/grid2.png);
 	z-index: 100;
 
@@ -33,17 +46,23 @@ $font: 'Short Stack', cursive;
 }
 
 button.newGame {
-	padding: 5px 15px 10px 15px;
-	background-image: url(../img/smallbutton2.png);
+	width: 160px;
+	height: 80px;
+	background-image: url(../img/restart_yellow.png);
 	background-repeat: no-repeat;
-	color: black;
 	outline: none;
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
 	font-family: $font;
-	font-size: 33px;
-	margin-top: 50px;
+	font-size: 27px;
+	margin-top: 30px;
+	transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+button.newGame:hover, .newGame:focus, .newGame:active {
+	transform: scale(1.1)
 }
 
 //---------------- KEYFRAMES -------------------------------------

@@ -1,9 +1,3 @@
-//COLOURS
-$black: #111111;
-$dark-gray: #4C4C4C;
-$gray: #A5A5A5;
-$pink: #FF1C54;
-
 //FONTS
 @import url('https://fonts.googleapis.com/css?family=Short+Stack');
 $font: 'Short Stack', cursive;
@@ -25,42 +19,22 @@ h1.gameTitle {
 	margin-top: 200px;
 }
 
-/*button.levels {
-	width: 210px;
-	height: 90px;
-	margin: 50px 10px 30px 10px;
-	padding: 10px;
-	font-size: 60px;
-	line-height: 10px;
-	background-color: white;
-	border: 5px solid $black;
-	border-radius: 2px;
-	color: $black;
-	outline: none;
-}
-
-button.levels:focus {
-	background-color: $black;
-	border: 5px solid $black;
-	border-radius: 2px;
-	color: white;
-	outline: none; 
-}
-*/
-
 button.play {
-	width: 280px;
+	width: 250px;
 	height: 130px;
-	padding-right: 30px;
 	margin-top: 70px;
 	font-size: 60px;
 	font-family: $font;
-	line-height: 10px;
-	color: black;
-	border: none;
 	background-color: transparent;
 	background-image: url( ../img/bigButton3.png );
 	background-repeat: no-repeat;
+	border: none;
 	outline: none;
 	cursor: pointer;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+button.play:hover, .play:focus, .play:active {
+	transform: scale(1.1)
 }
