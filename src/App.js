@@ -28,9 +28,9 @@ import img10 from './img/19.png';
 
 const letters = document.getElementsByClassName('letter')
 const categoriesAndWords = { 
-	"countries": [ 'hungary', 'netherlands', 'spain'], 
+	"country": [ 'hungary', 'netherlands', 'spain'], 
 	"fruit": [ 'apple', 'banana', 'orange'], 
-	"colours": [ 'black', 'white', 'blue' ] 
+	"colour": [ 'black', 'white', 'blue' ] 
 }
 
 const initialState = {

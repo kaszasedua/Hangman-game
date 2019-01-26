@@ -1,12 +1,13 @@
 //FONTS
-@import url('https://fonts.googleapis.com/css?family=Schoolbell');
-$font: 'Schoolbell', cursive;
+@import url('https://fonts.googleapis.com/css?family=Short+Stack');
+$font: 'Short Stack', cursive;
 
 .hint {
 	position: absolute;
 	font-family: $font;
-	font-size: 45px;
+	font-size: 35px;
 	color: black;
 	margin-top: 80px;
-	margin-left: 400px;
+	margin-left: 200px;
+	float: left;
 }

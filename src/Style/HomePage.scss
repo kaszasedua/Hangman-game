@@ -5,8 +5,8 @@ $gray: #A5A5A5;
 $pink: #FF1C54;
 
 //FONTS
-@import url('https://fonts.googleapis.com/css?family=Schoolbell');
-$font: 'Schoolbell', cursive;
+@import url('https://fonts.googleapis.com/css?family=Short+Stack');
+$font: 'Short Stack', cursive;
 
 #homeContainer {
 	position: absolute;
@@ -52,9 +52,10 @@ button.play {
 	width: 248px;
 	height: 130px;
 	margin-top: 70px;
-	font-size: 70px;
+	font-size: 60px;
 	font-family: $font;
 	line-height: 10px;
+	color: white;
 	border: none;
 	background-color: transparent;
 	background-image: url( ../img/button.png );
