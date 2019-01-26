@@ -1,0 +1,70 @@
+//COLOURS
+$black: #111111;
+$dark-gray: #4C4C4C;
+$gray: #707070;
+
+//FONTS
+@import url('https://fonts.googleapis.com/css?family=Schoolbell');
+$font: 'Schoolbell', cursive;
+
+#winContainer {
+	position: absolute;
+	height: 350px;
+	width: 550px;
+	padding: 10px 20px 10px 20px;
+	text-align: center;
+	margin-top: 15%;
+	margin-left: 30%;
+	border: 3px solid $black;
+	border-radius: 3px;
+	background-image: url( ../img/grid2.png);
+	z-index: 100;
+
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+#winText {
+	font-size: 35px;
+	color: $black;
+	margin-top: 50px;
+	font-family: $font;
+	z-index: 101;
+}
+
+button.newGame {
+	padding: 5px 15px 10px 15px;
+	background-image: url(../img/smallbutton2.png);
+	background-repeat: no-repeat;
+	color: black;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	font-family: $font;
+	font-size: 33px;
+	margin-top: 50px;
+}
+
+//---------------- KEYFRAMES -------------------------------------
+@-webkit-keyframes scale-up-center {
+	0% {
+	  	-webkit-transform: scale(0.5);
+	            transform: scale(0.5);
+	}
+	100% {
+	  	-webkit-transform: scale(1);
+	            transform: scale(1);
+	}
+}
+
+@keyframes scale-up-center {
+  	0% {
+    	-webkit-transform: scale(0.5);
+            	transform: scale(0.5);
+  	}
+  	100% {
+    	-webkit-transform: scale(1);
+            	transform: scale(1);
+  	}
+}

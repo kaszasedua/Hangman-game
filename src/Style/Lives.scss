@@ -1,0 +1,12 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css?family=Schoolbell');
+$font: 'Schoolbell', cursive;
+
+
+.lives {
+	position: relative;
+    font-size: 35px;
+    font-family: $font;
+    float: right;
+    z-index: 10000;
+}

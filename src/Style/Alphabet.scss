@@ -1,0 +1,55 @@
+//COLOURS
+$black: #111111;
+$dark-gray: #4C4C4C;
+$gray: #A5A5A5;
+
+//FONTS
+@import url('https://fonts.googleapis.com/css?family=Schoolbell');
+$font: 'Schoolbell', cursive;
+
+ul.alphabet {
+    font-family: $font;
+    font-size: 50px;
+    margin-left: 120px;
+    text-transform: uppercase;
+}
+
+.letter {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin: 3px;
+    padding: 20px;
+    text-align: center;
+    line-height: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    box-sizing: content-box;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+}
+
+.disabled {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin: 3px;
+    padding: 20px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: url(../img/cross.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    box-sizing: content-box;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+}

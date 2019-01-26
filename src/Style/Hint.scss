@@ -1,0 +1,12 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css?family=Schoolbell');
+$font: 'Schoolbell', cursive;
+
+.hint {
+	position: absolute;
+	font-family: $font;
+	font-size: 45px;
+	color: black;
+	margin-top: 80px;
+	margin-left: 400px;
+}

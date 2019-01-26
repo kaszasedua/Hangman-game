@@ -1,0 +1,25 @@
+//COLOURS
+$black: #111111;
+$dark-gray: #4C4C4C;
+$gray: #707070;
+
+//FONTS
+@import url('https://fonts.googleapis.com/css?family=Schoolbell');
+$font: 'Schoolbell', cursive;
+
+body {
+	font-family: $font;
+	color: $black;
+	padding: 10px;
+	background-image: url(./img/grid2.png);
+}
+
+img.home {
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	padding: 5px;
+	margin: 5px;
+	cursor: pointer;
+	z-index: 1000;
+}

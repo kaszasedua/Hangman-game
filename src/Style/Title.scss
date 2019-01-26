@@ -1,0 +1,15 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+$font: 'Patrick Hand', cursive;
+
+.titleContent {
+	width: 100%;
+	margin-left: -10px;
+	float: left;
+	overflow: hidden;
+}
+
+.gameTitle {
+	font-size: 50px;
+	text-align: center;
+}

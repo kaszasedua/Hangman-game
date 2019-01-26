@@ -1,0 +1,63 @@
+//COLOURS
+$black: #111111;
+$dark-gray: #4C4C4C;
+$gray: #A5A5A5;
+$pink: #FF1C54;
+
+//FONTS
+@import url('https://fonts.googleapis.com/css?family=Schoolbell');
+$font: 'Schoolbell', cursive;
+
+#homeContainer {
+	position: absolute;
+	margin: -10px;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	background-image: url(../img/grid2.png);
+	z-index: 100;
+}
+
+h1.gameTitle {
+	font-family: $font;
+	font-size: 100px;
+	letter-spacing: 15px;
+	margin-top: 200px;
+}
+
+/*button.levels {
+	width: 210px;
+	height: 90px;
+	margin: 50px 10px 30px 10px;
+	padding: 10px;
+	font-size: 60px;
+	line-height: 10px;
+	background-color: white;
+	border: 5px solid $black;
+	border-radius: 2px;
+	color: $black;
+	outline: none;
+}
+
+button.levels:focus {
+	background-color: $black;
+	border: 5px solid $black;
+	border-radius: 2px;
+	color: white;
+	outline: none; 
+}
+*/
+
+button.play {
+	width: 248px;
+	height: 130px;
+	margin-top: 70px;
+	font-size: 70px;
+	font-family: $font;
+	line-height: 10px;
+	border: none;
+	background-color: transparent;
+	background-image: url( ../img/button.png );
+	outline: none;
+	cursor: pointer;
+}
