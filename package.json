@@ -4,14 +4,6 @@
   "description": "",
   "main": "index.js",
   "homepage": "https://kaszasedua.github.io/hangman-game",
-  "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eject": "react-scripts eject"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -44,6 +36,15 @@
     "react-bootstrap": "^1.0.0-beta.3",
     "react-dom": "^16.5.0",
     "react-pose": "^4.0.4",
+    "react-scripts": "^3.0.1",
     "styled-components": "^4.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
