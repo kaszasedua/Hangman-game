@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../Style/YouWon.scss';
+import './YouWon.scss';
 
 const winText = "Congrats! You're not as bad as I though you were."
 

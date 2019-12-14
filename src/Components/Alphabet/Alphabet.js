@@ -1,5 +1,5 @@
 import React from "react";
-import '../Style/Alphabet.scss'
+import './Alphabet.scss'
 
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 

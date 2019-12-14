@@ -29,7 +29,7 @@ $font: 'Short Stack', cursive;
 	margin-left: 30%;
 	border: 3px solid $black;
 	border-radius: 4px;
-	background-image: url( ../img/grid2.png);
+	background-image: url( ../../../src/img/grid2.png);
 	z-index: 100;
 
 	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -46,7 +46,6 @@ $font: 'Short Stack', cursive;
 button.restart {
 	width: 130px;
 	height: 50px;
-	//background-image: url(../img/bigButton3.png);
 	background-repeat: no-repeat;
 	outline: none;
 	background-color: transparent;
@@ -66,16 +65,16 @@ button.restart:hover, .restart:focus, .restart:active {
 //---------------- KEYFRAMES -------------------------------------
 @-webkit-keyframes scale-up-center {
 	0% {
-	  	-webkit-transform: scale(0.5);
-	            transform: scale(0.5);
+		-webkit-transform: scale(0.5);
+				transform: scale(0.5);
 	}
 	50% {
-	  	-webkit-transform: scale(0.75);
-	            transform: scale(0.75);
+		-webkit-transform: scale(0.75);
+				transform: scale(0.75);
 	}
 	100% {
-	  	-webkit-transform: scale(1);
-	            transform: scale(1);
+		-webkit-transform: scale(1);
+				transform: scale(1);
 	}
 }
 

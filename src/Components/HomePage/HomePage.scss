@@ -8,7 +8,7 @@ $font: 'Short Stack', cursive;
 	height: 100%;
 	width: 100%;
 	text-align: center;
-	background-image: url(../img/grid2.png);
+	background-image: url(../../../src/img/grid2.png);
 	z-index: 100;
 }
 
@@ -26,7 +26,7 @@ button.play {
 	font-size: 60px;
 	font-family: $font;
 	background-color: transparent;
-	background-image: url( ../img/bigButton3.png );
+	background-image: url( ./images/bigButton3.png );
 	background-repeat: no-repeat;
 	border: none;
 	outline: none;

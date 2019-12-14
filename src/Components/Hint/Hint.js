@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../Style/Hint.scss'
+import './Hint.scss'
 
 const Hint = props => (
 	<div className="hintContainer">

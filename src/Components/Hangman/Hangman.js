@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../Style/Hangman.scss'
+import './Hangman.scss'
 
 const Hangman = props => (
 	<div className="hangmanContainer">

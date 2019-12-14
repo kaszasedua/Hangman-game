@@ -1,5 +1,5 @@
 import React from "react";
-import '../Style/WordToGuess.scss'
+import './WordToGuess.scss'
 
 
 const WordToGuess = props => (

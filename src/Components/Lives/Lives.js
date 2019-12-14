@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../Style/Lives.scss'
+import './Lives.scss'
 
 const Lives = props => (
 	<div className="livesBoard w-100 p-1 text-right">

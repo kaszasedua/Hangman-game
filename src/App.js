@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 
 import './App.scss';
 
-import Title from './Components/Title'
-import Lives from './Components/Lives'
-import Alphabet from './Components/Alphabet';
-import WordToGuess from './Components/WordToGuess';
-import YouWon from './Components/YouWon';
-import YouLost from './Components/YouLost';
-import HomePage from './Components/HomePage';
-import Hangman from './Components/Hangman';
-import Hint from './Components/Hint';
+import Lives from './Components/Lives/Lives'
+import Alphabet from './Components/Alphabet/Alphabet';
+import WordToGuess from './Components/WordToGuess/WordToGuess';
+import YouWon from './Components/YouWon/YouWon';
+import YouLost from './Components/YouLost/YouLost';
+import HomePage from './Components/HomePage/HomePage';
+import Hangman from './Components/Hangman/Hangman';
+import Hint from './Components/Hint/Hint';
 
 import Home from './img/home.png';
 
@@ -26,11 +25,12 @@ import img9 from './img/18.png';
 import img10 from './img/19.png';
 
 
-const letters = document.getElementsByClassName('letter')
+const letters = document.getElementsByClassName( 'letter' )
+
 const categoriesAndWords = { 
-	"country": [ 'hungary', 'netherlands', 'spain'], 
-	"fruit": [ 'apple', 'banana', 'orange'], 
-	"colour": [ 'black', 'white', 'blue' ] 
+	"country": [ 'hungary', 'netherlands', 'spain', 'france', 'finland', 'sweden', 'china', 'japan' ], 
+	"fruit": [ 'apple', 'banana', 'orange', 'tangerine', 'grapes', 'stawberry', 'raspberry' ], 
+	"colour": [ 'black', 'white', 'blue', 'yellow', 'orange', 'gray', 'purple' ] 
 }
 
 const initialState = {
@@ -51,39 +51,23 @@ class App extends React.Component {
 		super( props );
 
 		this.state = initialState
-
-		this.letterDoesMatch = this.letterDoesMatch.bind(this)
-		this.registerMove = this.registerMove.bind(this)
-		this.letterAlreadyClicked = this.letterAlreadyClicked.bind(this)
-		this.makeLetterVisible = this.makeLetterVisible.bind(this)
-		this.getLabel = this.getLabel.bind(this)
-		this.gameIsLost = this.gameIsLost.bind(this)
-		this.gameIsWon = this.gameIsWon.bind(this)
-		this.resetGame = this.resetGame.bind(this)
-		this.goBackToHome = this.goBackToHome.bind(this)
-		this.playButtonClicked = this.playButtonClicked.bind(this)
-		this.mediumLevel = this.mediumLevel.bind(this)
-		this.hangmanSprites = this.hangmanSprites.bind(this)
-
 	}
 
-	componentDidMount(){
+	componentDidMount = () => {
 		this.getCategory( this.getWord )
 	}
 
-	getCategory( callback ) {
-		const { words, currentWord } = this.state
-
+	getCategory = ( callback ) => {
 		const categories = Object.keys( categoriesAndWords )
-		const hintToCategory = categories[Math.floor( Math.random() * categories.length )]
+		const hintToCategory = categories[ Math.floor( Math.random() * categories.length ) ]
 		console.log( hintToCategory )
 		this.setState( prevState => ({
 			hint: hintToCategory
 		}), callback )
 	}
 
-	getWord( ) {
-		const { words, currentWord, hint } = this.state
+	getWord = () => {
+		const { hint } = this.state
 
 		const allWords = categoriesAndWords[hint]
 		console.log( hint )
@@ -100,8 +84,8 @@ class App extends React.Component {
 		}))
 	};
 
-	registerMove( letter ) {
-		const { currentWord, lives } = this.state
+	registerMove = ( letter ) => {
+		const { lives } = this.state
 		const clickedLetters = this.state.clickedLetters
 
 		if ( this.letterAlreadyClicked( letter ) ) return;
@@ -118,11 +102,10 @@ class App extends React.Component {
 				lives: this.state.lives - 1
 			}))
 		}
-
 		console.log( letter )
 	}
 
-	letterAlreadyClicked( letter ) {
+	letterAlreadyClicked = ( letter ) => {
 		const { clickedLetters } = this.state
 
 		if ( clickedLetters.includes( letter ) ) {
@@ -132,7 +115,7 @@ class App extends React.Component {
 		}
 	}
 
-	makeLetterVisible( letter ) {
+	makeLetterVisible = ( letter ) => {
 		const { currentWord } = this.state
 		const newLabel = currentWord.label.map( x => {
 			if ( x.letter == letter ) {
@@ -143,20 +126,18 @@ class App extends React.Component {
 		})
 
 		this.setState(prevState => ({
-			currentWord: {...prevState.currentWord, label: newLabel }
+			currentWord: { ...prevState.currentWord, label: newLabel }
 		}))
 	}
 
-	letterDoesMatch( letter ) {
-		const { currentWord, matchedLetters } = this.state
+	letterDoesMatch = ( letter ) => {
+		const { currentWord } = this.state
 		const doesMatch = currentWord.actualWord.includes( letter )
 
 		return doesMatch
 	}
 
-	getLabel() {
-		const { currentWord } = this.state
-
+	getLabel = () => {
 		const label = this.state.currentWord.label.map( x => {
 			if ( !x.isVisible ) {
 				return "_"
@@ -167,15 +148,13 @@ class App extends React.Component {
 		return label.join("")
 	}
 
-	playButtonClicked(e) {
-		const { onHomePage } = this.state
-
+	playButtonClicked = () => {
 		this.setState( prevState => ({
 			onHomePage: false
 		}))
 	}
 
-	gameIsWon() {
+	gameIsWon = () => {
 		const { currentWord } = this.state
 		const label = currentWord.label.filter( x => x.isVisible )
 
@@ -184,15 +163,15 @@ class App extends React.Component {
 		}	
 	} 
 
-	gameIsLost() {
-		const { lives, isGameLost } = this.state
+	gameIsLost = () => {
+		const { lives } = this.state
 
 		if ( lives == 0 ) {
 			return true
 		}
 	}
 
-	resetGame() {
+	resetGame = () => {
 		this.setState( prevState => ({
 			lives: 9,
 			onHomePage: false,
@@ -202,7 +181,7 @@ class App extends React.Component {
 		this.getWord()
 	}
 
-	goBackToHome() {
+	goBackToHome = () => {
 		this.setState( prevState => ({
 			lives: 9,
 			onHomePage: true,
@@ -212,31 +191,29 @@ class App extends React.Component {
 		this.getWord()
 	}
 
-	mediumLevel() {
-		const { currentImage } = this.state
-
+	mediumLevel = () => {
 		this.setState( prevState => ({
 			lives: 5,
 			gameMode: "medium"
 		}))
 	}	
 
-	hangmanSprites() {
+	hangmanSprites = () => {
 		const { gameMode, lives } = this.state
 
 		const numberOfLives = { 
-		  	"medium": {
-		  		9: img1,
+			"medium": {
+				9: img1,
 				8: img2,
 				7: img3,
 				6: img4,
-		  		5: img5, 
-		  		4: img6,
-		  		3: img7, 
-		  		2: img8,
-		  		1: img9,
-		  		0: img10
-		  	}
+				5: img5, 
+				4: img6,
+				3: img7, 
+				2: img8,
+				1: img9,
+				0: img10
+			}
 		}
 
 		const  myImage = numberOfLives[gameMode][lives]
@@ -245,21 +222,21 @@ class App extends React.Component {
 	}
 
 	render() {
-	    const { isGameWon, isGameLost, onHomePage, lives, currentImage, hint } = this.state
-	    
-	    return (
-	    	<div>
-	    		{ onHomePage ? <HomePage playButtonClicked={ () =>  this.playButtonClicked() } 
-	    						/> : <img className="home" src={ Home } onClick={ this.goBackToHome } /> }
-	     		{ this.gameIsWon() ? <YouWon resetGame={ this.resetGame }/> : null }
-	     		{ this.gameIsLost() ? <YouLost resetGame={ this.resetGame } /> : null }
-	    		<Lives numberOfLives={ lives } />
-	    		<Hint giveHint= { hint } />
-	      		<WordToGuess wordToGuess={ this.getLabel() } />
-	     		<Hangman hangmanSprites={ this.hangmanSprites() }/>
-	     		<Alphabet onClick={ this.registerMove } clickedLetters={ this.state.clickedLetters } />
-	      	</div>
-	    )
+		const { onHomePage, lives, hint } = this.state
+
+		return (
+			<div>
+				{ onHomePage ? <HomePage playButtonClicked={ () =>  this.playButtonClicked() } 
+								/> : <img className="home" src={ Home } onClick={ this.goBackToHome } /> }
+				{ this.gameIsWon() ? <YouWon resetGame={ this.resetGame }/> : null }
+				{ this.gameIsLost() ? <YouLost resetGame={ this.resetGame } /> : null }
+				<Lives numberOfLives={ lives } />
+				<Hint giveHint= { hint } />
+				<WordToGuess wordToGuess={ this.getLabel() } />
+				<Hangman hangmanSprites={ this.hangmanSprites() }/>
+				<Alphabet onClick={ this.registerMove } clickedLetters={ this.state.clickedLetters } />
+			</div>
+		)
 	}
 }
 

@@ -1,7 +1,6 @@
 import React from "react";
 
-import Lives from './Lives'
-import '../Style/HomePage.scss'
+import './HomePage.scss'
 
 const HomePage = props => (
 	<div id="homeBackground">

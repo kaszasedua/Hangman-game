@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../Style/YouLost.scss'
+import './YouLost.scss'
 
 const loseText = "You have failed miserably. Would you like to start again?"
 
