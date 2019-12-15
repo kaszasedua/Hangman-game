@@ -3,7 +3,7 @@ import './Alphabet.scss'
 
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
-const Alphabet = props => (
+export const Alphabet = props => (
 		<ul className="alphabet" style={{ width: "650px" }}>
 			{ alphabet.map( letter => (
 				<li key={letter}
@@ -16,4 +16,4 @@ const Alphabet = props => (
 		</ul>
 );
 
-export default Alphabet;
+//export default Alphabet;

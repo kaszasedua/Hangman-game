@@ -2,14 +2,7 @@ import React, { Component } from 'react';
 
 import './App.scss';
 
-import Lives from './Components/Lives/Lives'
-import Alphabet from './Components/Alphabet/Alphabet';
-import WordToGuess from './Components/WordToGuess/WordToGuess';
-import YouWon from './Components/YouWon/YouWon';
-import YouLost from './Components/YouLost/YouLost';
-import HomePage from './Components/HomePage/HomePage';
-import Hangman from './Components/Hangman/Hangman';
-import Hint from './Components/Hint/Hint';
+import { Lives, Alphabet, WordToGuess, YouWon, YouLost, HomePage, Hangman, Hint } from './Components/compIndex.js'
 
 import Home from './img/home.png';
 

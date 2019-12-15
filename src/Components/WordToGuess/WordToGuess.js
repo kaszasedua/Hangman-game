@@ -2,7 +2,7 @@ import React from "react";
 import './WordToGuess.scss'
 
 
-const WordToGuess = props => (
+export const WordToGuess = props => (
 	<div className="wordContainer">
 		<ul className="wordToGuess"> 
 			{ props.wordToGuess }
@@ -11,4 +11,4 @@ const WordToGuess = props => (
 	
 );
 
-export default WordToGuess;
+//export default WordToGuess;

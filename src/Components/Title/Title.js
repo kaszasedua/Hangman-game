@@ -1,11 +1,11 @@
 import React from "react";
 
-import '.Title.scss'
+import './Title.scss'
 
-const Title = props => (
+export const Title = props => (
 	<div className="titleContent">
 		<h1 className="gameTitle"> Hangman </h1>
 	</div>
 );
 
-export default Title;
+//export default Title;
